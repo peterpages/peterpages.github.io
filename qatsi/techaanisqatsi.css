@@ -1,0 +1,17 @@
+.title td { font-family: Arial Black; text-align: center; COLOR: white; }
+.title a { color: white; text-decoration: underline; }
+.title a:hover { color: red; text-decoration: underline; }
+.title p { font-family: Arial Black; text-align: center; COLOR: white; }
+.title h2 { font-family: Arial Black; text-align: center; COLOR: white; }
+
+.body td { font-family: Arial; text-align: center; COLOR: white; }
+.body a { color: white; text-decoration: underline; }
+.body a:hover { color: red; text-decoration: underline; }
+.body p { font-family: Arial; text-align: center; COLOR: white; }
+.body h2 { font-family: Arial; text-align: center; COLOR: white; }
+
+.article td { font-family: Arial; text-align: left; COLOR: white; }
+.article a { color: white; text-decoration: underline; }
+.article a:hover { color: red; text-decoration: underline; }
+.article p { font-family: Arial; text-align: left; COLOR: white; }
+.article h2 { font-family: Arial; text-align: left; COLOR: white; }
