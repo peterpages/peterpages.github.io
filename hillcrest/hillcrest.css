@@ -1,0 +1,43 @@
+
+.orange p { COLOR:#ff8c00; font-family:Arial Black; }
+.orange h2 { COLOR:#ff8c00; font-family:Arial Black; }
+.orange A { COLOR:#ff8c00; TEXT-DECORATION: none; }
+.orange A:hover { TEXT-DECORATION: underline; }
+.orangeinline A { COLOR: #ff8c00; TEXT-DECORATION: underline; }
+.orangeinline A:hover { TEXT-DECORATION: none; }
+
+.maroon p { COLOR:maroon; font-family:Arial Black; }
+.maroon A { COLOR: maroon; TEXT-DECORATION: none }
+.maroon A:hover { TEXT-DECORATION: underline; }
+.marooninline A { COLOR: maroon; TEXT-DECORATION: underline; }
+.marooninline A:hover { TEXT-DECORATION: none; }
+
+.orangeblock { background-color:#ff8c00; color:maroon; text-align: center; font-family:Arial Black; }
+.orangeblock A { color:maroon; TEXT-DECORATION: underline; }
+.orangeblock A:hover { TEXT-DECORATION: none; }
+
+.orangeblockl { background-color:#ff8c00; color:maroon; text-align: left; font-family:Arial Black; }
+.orangeblockl A { color:maroon; TEXT-DECORATION: underline; }
+.orangeblockl A:hover { TEXT-DECORATION: none; }
+
+.orangeblocklsm { background-color:#ff8c00; color:maroon; font-family:Arial; }
+.orangeblocklsm A { color:maroon; font-family:Arial Black; }
+.orangeblocklsm h2 { text-align:center; font-family:Arial Black; }
+
+
+.maroonblock { background-color:maroon; color:#ff8c00; text-align: center; font-family:Arial Black; }
+.maroonblock A { color:#ff8c00; TEXT-DECORATION: underline; }
+.maroonblock A:hover { TEXT-DECORATION: none; }
+
+.maroonblocksm { background-color:maroon; color:#ff8c00; text-align: center; }
+.maroonblocksm h2 { font-family:Arial Black; }
+.maroonblockbold { font-family:Arial Black; }
+.maroonblocksm { font-family:Arial; }
+.maroonblocksm A { color:#ff8c00; TEXT-DECORATION: underline; }
+.maroonblocksm A:hover { TEXT-DECORATION: none; }
+
+.maroonblockl { background-color:maroon; color:#ff8c00; text-align: left; font-family:Arial Black; }
+.maroonblockl A { color:#ff8c00; TEXT-DECORATION: underline; }
+.maroonblockl A:hover { TEXT-DECORATION: none; }
+
+.intro td { text-align:center; color:maroon; font-style:italic; font-weight:bold; font-family:Arial; }
