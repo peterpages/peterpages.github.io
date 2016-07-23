@@ -1,0 +1,188 @@
+<html>
+<head>
+<title>Experimental Films!  Listed, even!</title>
+<link rel="stylesheet" type="text/css"
+href="expfilm.css" />
+</head>
+<body bgcolor="black" MARGINWIDTH="0" MARGINHEIGHT="0 LEFTMARGIN="0" 
+TOPMARGIN="0"><center><div class="normal">
+<table width="769" border="0" cellspacing="0" cellpadding="0" height="100%"><tr><td colspan="3" height="82" width="769">
+<script language="JavaScript1.2" type="text/javascript">
+
+/***********************************************
+* Fade-in image slideshow script- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+var slideshow_width='769px' //SET IMAGE WIDTH
+var slideshow_height='82px' //SET IMAGE HEIGHT
+var pause=50 //SET PAUSE BETWEEN SLIDE (3000=3 seconds)
+
+var fadeimages=new Array()
+//SET 1) IMAGE PATHS, 2) optional link, 3), optional link target:
+fadeimages[0]=["img/topoff.JPG", "", ""]
+fadeimages[1]=["img/topon.JPG", "", ""]
+
+////NO need to edit beyond here/////////////
+
+var preloadedimages=new Array()
+for (p=0;p<fadeimages.length;p++){
+preloadedimages[p]=new Image()
+preloadedimages[p].src=fadeimages[p][0]
+}
+
+var ie4=document.all
+var dom=document.getElementById
+
+if (ie4||dom)
+document.write('<div style="position:relative;width:'+slideshow_width+';height:'+slideshow_height+';overflow:hidden"><div  id="canvas0" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';top:0;left:0;filter:alpha(opacity=10);-moz-opacity:10"></div><div id="canvas1" style="position:absolute;width:'+slideshow_width+';height:'+slideshow_height+';top:0;left:0;filter:alpha(opacity=10);-moz-opacity:10;visibility: hidden"></div></div>')
+else
+document.write('<img name="defaultslide" src="'+fadeimages[0][0]+'">')
+
+var curpos=10
+var degree=10
+var curcanvas="canvas0"
+var curimageindex=0
+var nextimageindex=1
+
+function fadepic(){
+if (curpos<100){
+curpos+=10
+if (tempobj.filters)
+tempobj.filters.alpha.opacity=curpos
+else if (tempobj.style.MozOpacity)
+tempobj.style.MozOpacity=curpos/101
+}
+else{
+clearInterval(dropslide)
+nextcanvas=(curcanvas=="canvas0")? "canvas0" : "canvas1"
+tempobj=ie4? eval("document.all."+nextcanvas) : document.getElementById(nextcanvas)
+tempobj.innerHTML=insertimage(nextimageindex)
+nextimageindex=(nextimageindex<fadeimages.length-1)? nextimageindex+1 : 0
+var tempobj2=ie4? eval("document.all."+nextcanvas) : document.getElementById(nextcanvas)
+tempobj2.style.visibility="hidden"
+setTimeout("rotateimage()",pause)
+}
+}
+
+function insertimage(i){
+var tempcontainer=fadeimages[i][1]!=""? '<a href="'+fadeimages[i][1]+'" target="'+fadeimages[i][2]+'">' : ""
+tempcontainer+='<img src="'+fadeimages[i][0]+'" border="0">'
+tempcontainer=fadeimages[i][1]!=""? tempcontainer+'</a>' : tempcontainer
+return tempcontainer
+}
+
+function rotateimage(){
+if (ie4||dom){
+resetit(curcanvas)
+var crossobj=tempobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+crossobj.style.zIndex++
+tempobj.style.visibility="visible"
+var temp='setInterval("fadepic()",50)'
+dropslide=eval(temp)
+curcanvas=(curcanvas=="canvas0")? "canvas1" : "canvas0"
+}
+else
+document.images.defaultslide.src=fadeimages[curimageindex][0]
+curimageindex=(curimageindex<fadeimages.length-1)? curimageindex+1 : 0
+}
+
+function resetit(what){
+curpos=10
+var crossobj=ie4? eval("document.all."+what) : document.getElementById(what)
+if (crossobj.filters)
+crossobj.filters.alpha.opacity=curpos
+else if (crossobj.style.MozOpacity)
+crossobj.style.MozOpacity=curpos/101
+}
+
+function startit(){
+var crossobj=ie4? eval("document.all."+curcanvas) : document.getElementById(curcanvas)
+crossobj.innerHTML=insertimage(curimageindex)
+rotateimage()
+}
+
+if (ie4||dom)
+window.onload=startit
+else
+setInterval("rotateimage()",pause)
+
+</script>
+</td></tr><tr><td width="142">
+<img src="img/left.bmp" height="300%" width="142"></td><td><center>
+
+
+
+<p><table width="70%"><tr><td><p><small><b><i>It's for this experimental film<br>
+Which nobody knows about, and which<br>
+I'm still figuring out what's going to go<br>
+In my experimental film<br> <br>
+
+Yeah, you're all gonna be in this experimental film<br>
+And even though I can't explain it<br>
+I already know how great it—<br>
+Even though I can't explain it<br>
+I already know how great it's<br>
+</i></p><p align="right">-- TMBG, "Experimental Film"</b></p></small></p></td></tr></table></p>
+
+<p>Throughout the course of the development of this website, I've made a couple of films.  Some of them have been taken straight off of my trusty digital camera/video recorder, others have been slightly edited using the Windows XP-standard Movie Maker software, while others are just slideshows.  Here they are, all in one place.</p>  
+
+<p>Jump Links (Chronological): <a href="#mailrun">Mail Run</a> | <a href="#laundryrun">Laundry Run</a> | <a href="#stairs">Peter and the Stairs</a> | <a href="#ddr">Dance Dance Revolution</a> | <a href="#jukebox">The Jukebox</a> | <a href="#cable">Cable Pulling</a> | <a href="#bear">Best of Bear</a></p>
+
+<p><a href="about.html">Click here to learn more about Brick House Productions</a>.</p>
+
+<p>Detail List (Newest First):<br> <br>
+<table width="90%">
+<tr><td><a name="bear" href="videos/bestofbear.wmv"><img src="thumbs/bestofbear.JPG" border="0"></a></td><td>&nbsp;</td><td><p align="left"><b><a href="videos/bestofbear.wmv">Best of Bear</a></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;23.2 MB<br>Bear E. Cool goes out to dinner.  Hilarity ensues.  Here's the best of all the clips we got during the trip.  Closed caption for the humor impaired.</td></tr>
+
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td><a name="cable" href="videos/cable.wmv"><img src="thumbs/cable.JPG" border="0"></a></td><td>&nbsp;</td><td><p align="left"><b><a href="videos/cable.wmv">The Super Bowl Cable Pulling Job</a></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1.8 MB<br>SUPER BOWL PARTY!  Problem: nearest cable jack 75 feet away.  Looks like a job for <a href="about.html">Brick House Productions</a>.</td></tr>
+
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td><a name="jukebox" href="videos/jukebox.wmv"><img src="thumbs/jukebox.JPG" border="0"></a></td><td>&nbsp;</td><td><p align="left"><b><a href="videos/jukebox.wmv">The Inagural Autonomous Operation of the Hillcrest Jukebox</a></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;25.8 MB<br>Long Story Short: found an old, broken jukebox in the attic.  Electrical Engineers fixed it.  It works now.  It is awesome.</td></tr>
+
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td><a name="ddr" href="videos/ddr.avi"><img src="thumbs/ddr.JPG" border="0"></a></td><td>&nbsp;</td><td><p align="left"><b><a href="videos/ddr.avi">Dance Dance Revolution</a></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;19.0 MB<br>Have you heard the term "DDR" before?  Have you wondered what it is?  Here are some people who are good at the game Dance Dance Revolution, to show you what it should be.</td></tr>
+
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td><a name="stairs" href="videos/stairs.wmv"><img src="thumbs/stairs.JPG" border="0"></a></td><td>&nbsp;</td><td><p align="left"><b><a href="videos/stairs.wmv">Stairs</a></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;12.5 MB<br>Peter + 2:30 AM + Soldier with Parachute + Stairs = Sort of Creepy</td></tr>
+
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td><a name="laundryrun" href="videos/laundryrun.wmv"><img src="thumbs/laundryrun.JPG" border="0"></a></td><td>&nbsp;</td><td><p align="left"><b><a href="videos/laundryrun.wmv">Laundry Run</a></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.88 MB<br>This film was made when I was learning to use Windows Movie Maker in advance of the <i>Techaanisqatsi</i> Teaser Trailer of some pictures I took while doing a particularly large amount of laundry.</td></tr>
+
+
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td></tr>
+
+<tr><td width="30%"><a name="mailrun" href="videos/mailrun.avi"><img src="thumbs/mailrun.JPG" border="0"></a></td><td width="5%">&nbsp;</td><td width="45%"><p align="left"><b><a href="videos/mailrun.avi">Mail Run</a></b><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;15.8 MB<br>The first experimental film, I made this just for fun and as an interesting concept.  It is kind of weird, and the dark/light balance is off, and the "script" is kind of sketchy.  Check it out.</td></tr>
+
+</table></p>
+
+<p><table width="70%"><tr><td><small><p><i>I already know the ending<br>
+It's the part that makes your face implode<br>
+I don't know what makes your face implode<br>
+But that's the way the movie ends</i><br> <p align="right">-- <b>TMBG, "Experimental Film"</b></p></small></td></tr></table></p>
+
+<p><a href="http://peterpages.net">Back to PeterPages.net</a><br>
+<a href="about.html">Learn more about Brick House Productions</a></p>
+
+<p><table border=0 cellpadding=1 cellspacing=0 width="1%" bgcolor="white"><tr><td><table border=0 cellpadding=3 cellspacing=0 width="1%" bgcolor="black"><tr><td nowrap><a href="http://us.1.p6.webhosting.yahoo.com/pstats/pdkauffmann"><img src="http://pic.geocities.com/us/i/geo/ao/pstat.gif" width="14" height="14" alt="See who's visiting this page." border="0" align="left"></a><font face=arial size=-1> <a href="http://us.1.p6.webhosting.yahoo.com/pstats/pdkauffmann"><b>View Page Stats</b></a></font><br><font face=arial size=-2>See who's visiting this page.</font></td></tr>
+</table></td></tr>
+</table></p>
+
+
+</center></td><td width="142"><img src="img/right.bmp" height="300%" width="142">
+</td></tr></table>
+</center></div></body>
+</html>

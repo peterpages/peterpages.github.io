@@ -1,0 +1,20 @@
+.normal A { COLOR:white; TEXT-DECORATION: none; }
+.normal A:hover { TEXT-DECORATION: underline; }
+.normal td { COLOR:white; FONT-FAMILY:Arial; TEXT-ALIGN:center; }
+
+.left A { COLOR:white; TEXT-DECORATION: none; }
+.left A:hover { TEXT-DECORATION: underline; }
+.left P { COLOR:white; FONT-FAMILY:Arial; TEXT-ALIGN:left; }
+.left h3 { COLOR:white; FONT-FAMILY:Arial Black; TEXT-AILGN:center; }
+
+.title { COLOR:white; FONT-FAMILY:Arial Black; font-size:large; }
+
+.center A { COLOR:white; TEXT-DECORATION: none; }
+.center A:hover { TEXT-DECORATION: underline; }
+.center P { COLOR:white; FONT-FAMILY:Arial; TEXT-ALIGN:center; }
+.center td { COLOR:white; FONT-FAMILY:Arial; TEXT-AILGN:center; }
+
+.leftinline A { COLOR:white; TEXT-DECORATION: underline; }
+.leftinline A:hover { color:red; TEXT-DECORATION: none; }
+.leftinline P { COLOR:white; FONT-FAMILY:Arial; TEXT-ALIGN:left; }
+.leftinline h3 { COLOR:white; FONT-FAMILY:Arial Black; TEXT-AILGN:center; }

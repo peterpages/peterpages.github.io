@@ -1,0 +1,138 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css"
+href="main.css" />
+<title>Back 2 Skewl Countdown Script</title>
+
+<script type="text/javascript">
+
+/***********************************************
+* Dynamic Countdown script- © Dynamic Drive (http://www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit http://www.dynamicdrive.com/ for this script and 100s more.
+***********************************************/
+
+function cdtime(container, targetdate){
+if (!document.getElementById || !document.getElementById(container)) return
+this.container=document.getElementById(container)
+this.currentTime=new Date()
+this.targetdate=new Date(targetdate)
+this.timesup=false
+this.updateTime()
+}
+
+cdtime.prototype.updateTime=function(){
+var thisobj=this
+this.currentTime.setSeconds(this.currentTime.getSeconds()+1)
+setTimeout(function(){thisobj.updateTime()}, 1000) //update time every second
+}
+
+cdtime.prototype.displaycountdown=function(baseunit, functionref){
+this.baseunit=baseunit
+this.formatresults=functionref
+this.showresults()
+}
+
+cdtime.prototype.showresults=function(){
+var thisobj=this
+
+
+var timediff=(this.targetdate-this.currentTime)/1000 //difference btw target date and current date, in seconds
+if (timediff<0){ //if time is up
+this.timesup=true
+this.container.innerHTML=this.formatresults()
+return
+}
+var oneMinute=60 //minute unit in seconds
+var oneHour=60*60 //hour unit in seconds
+var oneDay=60*60*24 //day unit in seconds
+var dayfield=Math.floor(timediff/oneDay)
+var hourfield=Math.floor((timediff-dayfield*oneDay)/oneHour)
+var minutefield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour)/oneMinute)
+var secondfield=Math.floor((timediff-dayfield*oneDay-hourfield*oneHour-minutefield*oneMinute))
+if (this.baseunit=="hours"){ //if base unit is hours, set "hourfield" to be topmost level
+hourfield=dayfield*24+hourfield
+dayfield="n/a"
+}
+else if (this.baseunit=="minutes"){ //if base unit is minutes, set "minutefield" to be topmost level
+minutefield=dayfield*24*60+hourfield*60+minutefield
+dayfield=hourfield="n/a"
+}
+else if (this.baseunit=="seconds"){ //if base unit is seconds, set "secondfield" to be topmost level
+var secondfield=timediff
+dayfield=hourfield=minutefield="n/a"
+}
+this.container.innerHTML=this.formatresults(dayfield, hourfield, minutefield, secondfield)
+setTimeout(function(){thisobj.showresults()}, 1000) //update results every second
+}
+
+/////CUSTOM FORMAT OUTPUT FUNCTIONS BELOW//////////////////////////////
+
+//Create your own custom format function to pass into cdtime.displaycountdown()
+//Use arguments[0] to access "Days" left
+//Use arguments[1] to access "Hours" left
+//Use arguments[2] to access "Minutes" left
+//Use arguments[3] to access "Seconds" left
+
+//The values of these arguments may change depending on the "baseunit" parameter of cdtime.displaycountdown()
+//For example, if "baseunit" is set to "hours", arguments[0] becomes meaningless and contains "n/a"
+//For example, if "baseunit" is set to "minutes", arguments[0] and arguments[1] become meaningless etc
+
+
+function formatresults(){
+if (this.timesup==false){//if target date/time not yet met
+var displaystring=arguments[0]+" <sup>days</sup> "+arguments[1]+" <sup>hours</sup> "+arguments[2]+" <sup>minutes</sup> <small>and</small>  "+arguments[3]+" <sup>seconds</sup>"
+}
+else{ //else if target date/time met
+var displaystring="1 year or so, since it's passed already"
+}
+return displaystring
+}
+
+function formatresults2(){
+if (this.timesup==false){ //if target date/time not yet met
+var displaystring="<span class='lcdstyle'>"+arguments[0]+" <sup>days</sup> "+arguments[1]+" <sup>hours</sup> "+arguments[2]+" <sup>minutes</sup> <small>and</small> "+arguments[3]+" <sup>seconds</sup></span>"
+}
+else{ //else if target date/time met
+var displaystring="1 year or so, since it's passed already" //Don't display any text
+//alert("Christmas is here!") //Instead, perform a custom alert
+}
+return displaystring
+}
+
+</script>
+</head>
+<body background="banner/bg.PNG" text="white">
+<center><img src="banner/backtoskewl.PNG"><br><font face="arial narrow"><h1><div id="countdowncontainer"></div>left until move-in starts.</h1><h3>Peter plans to move-in in about
+<br />
+<div id="countdowncontainer2"></div></h3><h3>
+Unfortunately, meal plans don't start for another
+<br />
+<div id="countdowncontainer3"></div>
+
+and I don't get off of work for another
+<br />
+<div id="countdowncontainer4"></div>
+</h3></font>
+
+<script type="text/javascript">
+var futuredate=new cdtime("countdowncontainer", "August 15, 2007 08:00:00")
+futuredate.displaycountdown("days", formatresults)
+
+var futuredate=new cdtime("countdowncontainer3", "August 17, 2007 10:30:00")
+futuredate.displaycountdown("days", formatresults)
+
+
+var futuredate=new cdtime("countdowncontainer2", "August 15, 2007 12:30:00")
+futuredate.displaycountdown("days", formatresults)
+
+var futuredate=new cdtime("countdowncontainer4", "August 03, 2007 17:00:00")
+futuredate.displaycountdown("days", formatresults)
+
+</script>
+
+<p>
+<div class="blue"><font color="blue">Hot Links: <a href="family.html">List of Pages</a> | <a href="main.html">Recent Changes</a></font></div></p>
+
+
+</body></html>

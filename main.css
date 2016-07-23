@@ -1,0 +1,26 @@
+A { COLOR: white; }
+.cool A { COLOR: white; TEXT-DECORATION: underline; }
+.cool A:hover { TEXT-DECORATION: none; }
+.inline A { COLOR: white; TEXT-DECORATION: underline; }
+.inline p { text-align:left; }
+.title A { COLOR: white; font-family:Arial Black; font-size:large; TEXT-DECORATION: none; }
+h1 { text-align:center; font-weight:bold; font-family:Arial Narrow; }
+h2 { text-align:center; font-weight:bold; font-family:Arial Narrow; }
+td { color:white; font-family: arial; }
+.blue A:hover { TEXT-DECORATION: none }
+.blue A { COLOR: blue; FONT-FAMILY: Arial; FONT-WEIGHT: bold; TEXT-DECORATION: underline }
+.blue ol { COLOR: blue; FONT-FAMILY: Arial; FONT-WEIGHT: bold; }
+.blue  { COLOR: blue; FONT-FAMILY: Arial; FONT-WEIGHT: bold; }
+.titleblue A:hover { TEXT-DECORATION: none }
+.titleblue A { COLOR: blue; FONT-FAMILY: Arial; FONT-WEIGHT: bold; TEXT-DECORATION: none }
+.titleblue ol { COLOR: blue; FONT-FAMILY: Arial; FONT-WEIGHT: bold; }
+.titleblue  { COLOR: blue; FONT-FAMILY: Arial; FONT-WEIGHT: bold; }
+.boldblue A:hover { TEXT-DECORATION: none }
+.boldblue A { COLOR: blue; FONT-FAMILY: Arial Black; FONT-WEIGHT: bold; TEXT-DECORATION: none }
+.boldblue ol { COLOR: blue; FONT-FAMILY: Arial Black; FONT-WEIGHT: bold; }
+.boldblue { COLOR: blue; FONT-FAMILY: Arial Black; FONT-WEIGHT: bold; }
+
+.stats { text-align:center; font-size:80%; font-family:Arial; color: blue; }
+.stats a { color: blue; font-weight: bold;}
+.stats img { margin-left: 5px; }
+
